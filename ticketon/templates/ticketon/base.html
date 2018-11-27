@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+    <head>
+        <title>Cinema ticket booking</title>
+
+    </head>
+    <body style="background-color:#eee1f2">
+        <div class="page-header">
+                    <h2>Hi,
+                    {{request.user.username}}
+                    </h2>        </div>
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+
+                    <h4>Here is the list of cinemas. Press any to see the schedule</h4>
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

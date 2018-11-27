@@ -1,0 +1,7 @@
+{% extends 'ticketon/base.html' %}
+{% block content %}
+    {% for cinema in cinemas %}
+        <a href="{% url 'cinema_detail' pk=cinema.pk %}">{{ cinema.name }}</a>
+            <p>{{ post.text|linebreaksbr }}</p>
+    {% endfor %}
+{% endblock %}

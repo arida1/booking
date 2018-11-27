@@ -1,0 +1,6 @@
+{% extends 'ticketon/base.html' %}
+{% block content %}
+    {% for schedule in schedules %}
+        <a href="{% url 'ticket_list' pk1 = 1}">Date: {{ schedule.time}}, hall: {{schedule.hall }}, {{schedule.movie_name.name}}</a><br>
+    {% endfor %}
+{% endblock %}
